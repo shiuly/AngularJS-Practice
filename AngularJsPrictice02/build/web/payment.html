@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angularJar/angular.min.js" type="text/javascript"></script>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script src="angular.min.js" type="text/javascript"></script>
+    </head>
+    <body style="margin-top: 100px"  ng-app="">
+    <center>
+        <form>
+            <fieldset style="width: 800px;height: 400px ;color: yellow; background-color: gray;border-radius:15px" >
+
+                <div ng-init="Payment = ['Select one','BKash', 'Rocket', 'Bank Account', 'Cash']">
+                    <h1>Payment Method</h1>
+                    <select ng-model="s" >
+
+                        <option ng-repeat="Bkash in Payment">{{Bkash}}</option>
+                    </select><br/>
+
+                    <div ng-if="s === 'BKash'">
+                        <form action="index.html">
+                            <div class="form-group">
+                                <label >Bkash number</label>
+                                <input type="text" class="form-control "   placeholder="Write your bkash number">
+                                <button type="submit" class="btn btn-info ">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    
+                     <div ng-if="s === 'Rocket'">
+                        <form action="index.html">
+                            <div class="form-group">
+                                <label >Rocket number</label>
+                                <input type="text" class="form-control "   placeholder="Write your Rocket number">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    
+                      <div ng-if="s === 'Bank Account'">
+                        <form action="index.html">
+                            <div class="form-group">
+                                <label >Rocket number</label>
+                                <input type="text" class="form-control "   placeholder="Account No.">
+                                   <input type="text" class="form-control "   placeholder="Account Name.">
+                                      <input type="text" class="form-control "   placeholder="Bank Name & Branch">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    
+                
+                     <div ng-if="s === 'Cash'">
+                        <form action="index.html">
+                            <div class="form-group">
+                                <label >Rocket number</label>
+                                <input type="text" class="form-control "   placeholder="Currency">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+        </form>
+    </center>
+</body>
+</html>

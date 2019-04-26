@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angularJar/angular.min.js" type="text/javascript"></script>
+    </head>
+    <body style="margin-top: 80px">
+    <center>
+        <div ng-app="app" ng-controller="ctrl" >
+            <input type="Checkbox" ng-model="model1">Checkbox
+            <input type="text" ng-hide="model1">
+            <input type="text" ng-show="model1">
+            
+            <select>
+                <option ng-repeat="x in names">
+                    {{x}}
+                </option>
+            </select>
+
+        </div>
+    </center>
+    <script>
+        var m1=angular.module('app',[]);
+        m1.controller("ctrl",function($scope){
+           $scope.names=["shiuly","math"] ;
+        });
+        
+    </script>
+</body>
+</html>

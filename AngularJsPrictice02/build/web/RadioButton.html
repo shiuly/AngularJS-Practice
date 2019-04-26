@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular.min.js" type="text/javascript"></script>
+    </head>
+    <body style="margin-top: 100px">
+    <center>
+        <div ng-app="">
+            <table>
+                <th> Gender:</th>
+                <tr>
+                    <td>
+                      <input type="radio" value="Male" ng-model="m1">Male<br>  
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" value="Female" ng-model="m1">Female<br> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                             <input type="radio" value="Other" ng-model="m1">Other<br>
+                    </td>
+                </tr>
+            </table>
+            
+           
+           
+              <div ng-if="m1=='Male'">
+                  <h1>  You selected:  {{m1}}</h1>
+              </div>
+              <div ng-if="m1=='Female'">
+                  <h1> You selected:  {{m1}}</h1>
+              </div>
+                <div ng-if="m1=='Other'">
+                    <h1> You selected:  {{m1}}</h1>
+              </div>
+        </div>
+    </center>
+    </body>
+</html>

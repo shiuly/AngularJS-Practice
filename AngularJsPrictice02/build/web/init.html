@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angularJar/angular.min.js" type="text/javascript"></script>
+    </head>
+    <body  ng-app="">
+        <div ng-init="names = ['Credit', 'Bank', 'Bkash']">
+            <select ng-model="s">
+
+
+
+                <option ng-repeat="x in names">
+                    {{x}}
+                </option>
+
+            </select>
+
+            you select:{{s}}
+
+
+
+             <div ng-if="s=='bank'">
+                <h1>x</h1>
+                Name: Shahin<br/>
+                Email: shahin@gmail.com<br/>
+                Address: Dhaka
+            </div>
+
+            <div ng-if="s == 'Bkash'">
+                name: Bkash account
+            </div>
+
+            <div ng-if="s == 'Credit'">
+                name: credit account
+            </div>
+        </div>
+    </body>
+
+</html>
